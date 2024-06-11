@@ -24,3 +24,10 @@ CREATE TABLE recognition (
     employee_id INT REFERENCES employeeInfo(employee_id),
     recognition_date DATE
 );
+
+SELECT e.employee_id, e.fName, e.lName,
+    (p.revenue_generated + p.work_quality + p.new_existing_business) / 3 AS average_ranking
+FROM employeeInfo e
+JOIN performance p ON e.employee_id = p.employee_id
+ORDER BY average_ranking DESC
+LIMIT 3;
