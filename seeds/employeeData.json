@@ -1,0 +1,23 @@
+[
+  {
+    "fName": "Sal",
+    "lName": "Johnson",
+    "email": "sal@hotmail.com",
+    "password": "password12345",
+    "department": "Marketing"
+  },
+  {
+    "fName": "Lernantino",
+    "lName": "Pope",
+    "email": "lernantino@gmail.com",
+    "password": "password12346",
+    "department": "Sales"
+  },
+  {
+    "fName": "Amiko",
+    "lName": "Cruz",
+    "email": "amiko2k20@aol.com",
+    "password": "password12347",
+    "department": "Finance"
+  }
+]
