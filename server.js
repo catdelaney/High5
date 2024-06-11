@@ -8,9 +8,6 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Import the DataAnalytics model
-const DataAnalytics = require('./models/dataAnalytics');
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -42,25 +39,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// Route for displaying the analytics page with data visualization
-app.get('/analytics', async (req, res) => {
-  try {
-
-    // Fetch all data from the DataAnalytics model
-    const data = await DataAnalytics.findAll();
-    
-    // Render the 'analytics' view and pass the data
-    res.render('analytics', { data: data.map(item => item.toJSON()) });
-  } catch (err) {
-    console.error('Error fetching data:', err);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
