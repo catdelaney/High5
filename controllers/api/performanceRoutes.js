@@ -13,7 +13,7 @@ router.post('/', withAuth, async (req, res) => {
       revenue_generated,
       work_quality,
       new_existing_business,
-      //is the next line needed?
+      //MICHELLE - is the next line needed?
       //user_id: req.session.user_id,
     });
 
@@ -62,21 +62,26 @@ router.get('/', withAuth, async (req, res) => {
     });
 
 
+//MICHELLE - Do we need router.put to Update Performance Review?
+
 router.delete('/:id', withAuth, async (req, res) => {
+  const { id } = req.params;
   try {
-    const projectData = await Project.destroy({
+    const deleted = await performance.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (deleted) {
+      res.status(204).json('Performance review deleted')
+    } else {
+      res.status(404).json({ message: 'No performance review found with this id!' });
       return;
     }
-
-    res.status(200).json(projectData);
+    //MICHELLE - do we need this line?
+    //res.status(200).json(projectData);
   } catch (err) {
     res.status(500).json(err);
   }
