@@ -47,11 +47,11 @@ Performance.init(
         max: 5
       }
     },
-    overall_score: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      defaultValue: 0
-    }
+    // overall_score: {
+    //   type: DataTypes.FLOAT,
+    //   allowNull: false,
+    //   defaultValue: 0
+    // }
   },
   {
     hooks: {
