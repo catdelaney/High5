@@ -39,9 +39,12 @@ Employee.init(
         len: [8],
       }
     },
-    department: {
-      type: DataTypes.STRING,
-      allowNull: false
+    department_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'department',
+        key: 'id'
+      }
     }
   },
   {
