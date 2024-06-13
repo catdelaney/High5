@@ -16,11 +16,11 @@ Employee.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    fName: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    lName: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

@@ -22,4 +22,4 @@ Employee.belongsTo(Department, {
   foreignKey: 'department_id'
 });
 
-module.exports = { Employee, Performance };
+module.exports = { Employee, Performance, Department };
