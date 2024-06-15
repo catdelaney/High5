@@ -20,7 +20,7 @@ Employee.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    first_name: {
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
