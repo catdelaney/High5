@@ -1,23 +1,23 @@
 [
   {
-    "fName": "Sal",
-    "lName": "Johnson",
+    "first_name": "Sal",
+    "last_name": "Johnson",
     "email": "sal@hotmail.com",
     "password": "password12345",
-    "department": "Marketing"
+    "department_id": 1
   },
   {
-    "fName": "Lernantino",
-    "lName": "Pope",
+    "first_name": "Lernantino",
+    "last_name": "Pope",
     "email": "lernantino@gmail.com",
     "password": "password12346",
-    "department": "Sales"
+    "department_id": 2
   },
   {
-    "fName": "Amiko",
-    "lName": "Cruz",
+    "first_name": "Amiko",
+    "last_name": "Cruz",
     "email": "amiko2k20@aol.com",
     "password": "password12347",
-    "department": "Finance"
+    "department_id": 3
   }
 ]
