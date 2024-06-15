@@ -16,11 +16,11 @@ Employee.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    fName: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    lName: {
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -39,9 +39,12 @@ Employee.init(
         len: [8],
       }
     },
-    department: {
-      type: DataTypes.STRING,
-      allowNull: false
+    department_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'department',
+        key: 'id'
+      }
     }
   },
   {

@@ -46,11 +46,6 @@ Performance.init(
         min: 1,
         max: 5
       }
-    },
-    overall_score: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      defaultValue: 0
     }
   },
   {
