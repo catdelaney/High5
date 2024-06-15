@@ -11,13 +11,6 @@ Performance.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    employee_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'employee',
-        key: 'id',
-      }
-    },
     review_date: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -45,6 +38,13 @@ Performance.init(
       validate: {
         min: 1,
         max: 5
+      }
+    },
+    employee_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'employee',
+        key: 'id',
       }
     }
   },
