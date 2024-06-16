@@ -1,0 +1,63 @@
+<div class='container mx-auto p-4'>
+  <h1 class='text-3xl font-bold'>Performance Reviews</h1>
+  <div>
+    <div class='sidebar'>
+      {{#each employees}}
+        <button class="{{#if @first}}active{{/if}} employee">{{this.first_name}} {{this.last_name}}</button>
+      {{/each}}
+    </div>
+
+    <div class='content'>
+      <form>
+        <div>
+          <label>Revenue Generated (Dollar Amount):</label>
+          <div>
+            <input type='radio' name='revenue_generated' value='1' /><span> 0-50k </span>
+            <input type='radio' name='revenue_generated' value='2' /><span> 51k-100k </span> 
+            <input type='radio' name='revenue_generated' value='3' /><span> 101k-150k </span>
+            <input type='radio' name='revenue_generated' value='4' /><span> 151k-200k </span>
+            <input type='radio' name='revenue_generated' value='5' /><span> 200k+ </span> 
+          </div>
+        </div>
+        <div>
+          <label>New or Existing Business:</label>
+          <div>
+            <input type='radio' name='new_existing_business' value='1' /><span> Existing/10 or less  </span>
+            <input type='radio' name='new_existing_business' value='2' /><span> NEW/50 or less </span> 
+            <input type='radio' name='new_existing_business' value='3' /><span> NEW/100 or less </span>
+            <input type='radio' name='new_existing_business' value='4' /><span> NEW/101+  </span>
+            <input type='radio' name='new_existing_business' value='5' /><span> New </span> 
+          </div>
+        </div>
+        <div>
+          <label>Quality of Work (1 being lowest, 5 being highest):</label>
+          <div>
+            <input type='radio' name='work_quality' value='1' /><span> 1  </span>
+            <input type='radio' name='work_quality' value='2' /><span> 2 </span> 
+            <input type='radio' name='work_quality' value='3' /><span> 3 </span>
+            <input type='radio' name='work_quality' value='4' /><span> 4  </span>
+            <input type='radio' name='work_quality' value='5' /><span> 5 </span> 
+          </div>
+        </div>
+        <div>
+          <label>Comments:</label>
+          <textarea name='comments'></textarea>
+        </div>
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.sidebar button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelector('.sidebar button.active').classList.remove('active');
+        button.classList.add('active');
+      });
+    });
+  });
+</script>
