@@ -2,13 +2,11 @@
 
 ## Overview
 
-The Employee Feedback and Recognition Platform is a comprehensive solution designed to enhance communication, gather feedback, and recognize achievements within an organization. The platform enables employers to create feedback surveys, display achievements on a recognition wall, provide communication channels, and conduct performance reviews. An analytics dashboard offers valuable insights into employee performance and feedback, and the platform integrates seamlessly with existing HR systems.
+The Employee Feedback and Recognition Platform is a comprehensive solution designed to enhance communication, gather feedback, and recognize achievements within an organization. The platform enables employers to create feedback surveys, display top performers, and conduct performance reviews. An analytics dashboard offers valuable insights into employee performance and feedback, and the platform integrates seamlessly with existing HR systems.
 
 ## Features
 
 - **Feedback Surveys**: Create and distribute surveys to gather feedback from employees.
-- **Recognition Wall**: Highlight and recognize employee achievements.
-- **Communication Channels**: Facilitate communication between employees and management.
 - **Performance Reviews**: Conduct and manage employee performance reviews.
 - **Analytics Dashboard**: Visualize data with interactive charts and graphs.
 - **HR System Integration**: Seamlessly integrate with existing HR systems.
@@ -54,7 +52,7 @@ The platform will be deployed on Render, ensuring reliable and scalable hosting.
 
 ## Usage
 
-Start the development server using `npm run dev` and open your browser to navigate to `http://localhost:3000`.
+Start the development server using `npm run dev` and open your browser to navigate to `http://localhost:3001`.
 
 ## Contributing
 
@@ -70,8 +68,8 @@ We welcome contributions from the community. To contribute, please follow these 
 
 For any inquiries or feedback, please reach out to our team.
 
-Catherine Delaney - Database/SQL
-Natalie Clinton - Analytics Page
-Aneri Patel - Home Page & Log In Page
-Michelle Bell - API/Cookies
-Xander Trask - API/Cookies
+Catherine Delaney - https://github.com/catdelaney
+Natalie Clinton - https://github.com/NatalieClinton 
+Aneri Patel - https://github.com/aneripatel2002 
+Michelle Bell - https://github.com/MichelleBell0 
+Xander Trask - https://github.com/mine-mod
