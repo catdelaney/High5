@@ -19,7 +19,8 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
-  json: function (context) {
-    return JSON.stringify(context);
-  }
+    // Convert the given context (object) to a JSON string
+    json: function (context) {
+      return JSON.stringify(context);
+    }
 };

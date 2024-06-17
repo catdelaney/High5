@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
             include: [{ model: Employee, include: Department }],
         });
 
-        // Define the departments
+        // Defines the departments
         const departments = [
             { name: "Marketing" },
             { name: "Sales" },
