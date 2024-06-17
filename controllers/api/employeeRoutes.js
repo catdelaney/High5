@@ -1,9 +1,33 @@
 const router = require('express').Router();
-const { Employee } = require('../../models');
+const Employee = require('../../models/Employee');
+const Department = require('../../models/Department');
+
 
 router.post('/', async (req, res) => {
   try {
-    const employeeData = await Employee.create(req.body);
+
+    console.log(req.body);
+
+    const departmentData = await Department.findOne({
+      where: {
+        name: req.body.department
+      }
+    });
+
+    // Serialize data so the template can read it and render it
+    const department = departmentData.get({ plain: true });
+
+    const payload = { 
+      first_name: req.body.firstName,
+      last_name: req.body.lastName,
+      email: req.body.email,
+      password: req.body.password,
+      department_id: department.id,
+    };
+
+    console.log(payload);
+
+    const employeeData = await Employee.create(payload);
     const employeefetchData = await Employee.findAll({});
     console.log(employeefetchData);
     req.session.save(() => {
@@ -13,6 +37,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(employeeData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
