@@ -46,44 +46,6 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
-//Get Performance Reviews
-// router.get('/', withAuth, async (req, res) => {
-//   try {
-//     const performances = await Performance.findAll({
-//       include: [{
-//         model: Employee,
-//         attributes: ['fName', 'lName', 'department']
-//       }]
-//     });
-//     res.status(200).json(performances);
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(400).json(err);
-//   }
-//   });
-
-//Get Performance Review by Employee ID#
-// router.get('/:id', withAuth, async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const performances = await Performance.findByPk(id, {
-//       include: [{
-//         model: Employee,
-//         attributes: ['fName', 'lName', 'department']
-//       }]
-//     });
-//     if (performance) {
-//       res.status(200).json(performances);
-//     } else {
-//       res.status(404).json('Performance review not found');
-//     }
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(400).json(err);
-//   }
-//   });
-
-
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const performanceData = await Performance.destroy({
