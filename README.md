@@ -16,6 +16,7 @@ The Employee Feedback and Recognition Platform is a comprehensive solution desig
 ## Tech Stack
 
 ### Frontend
+
 - HTML
 - CSS
 - JavaScript
@@ -23,18 +24,22 @@ The Employee Feedback and Recognition Platform is a comprehensive solution desig
 - Bootstrap
 
 ### Backend
+
 - Node.js
 - Express.js
 
 ### Database
+
 - PostgreSQL
 - Sequelize ORM
 
 ### Authentication
+
 - express-session
 - cookies
 
 ### Data Visualization
+
 - Chart.js
 
 ## Deployment
@@ -61,7 +66,8 @@ We welcome contributions from the community. To contribute, please follow these 
 4. Push your changes to your forked repository.
 5. Create a pull request to merge your changes into the main branch..
 
-## Contact 
+## Contact
+
 For any inquiries or feedback, please reach out to our team.
 
 Catherine Delaney - Database/SQL
@@ -69,5 +75,3 @@ Natalie Clinton - Analytics Page
 Aneri Patel - Home Page & Log In Page
 Michelle Bell - API/Cookies
 Xander Trask - API/Cookies
-Justin Morris - Performance Review Page
-Kelvin Mgbatogu - N/A
