@@ -4,8 +4,7 @@ const { Employee } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const employeeData = await Employee.create(req.body);
-    const employeefetchData = await Employee.findAll({});
-    console.log(employeefetchData);
+
     req.session.save(() => {
       req.session.employee_id = employeeData.id;
       req.session.logged_in = true;
@@ -19,9 +18,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const employeeData = await Employee.findOne({
-      where: { email: req.body.email },
-    });
+    const employeeData = await Employee.findOne({ where: { email: req.body.email } });
 
     if (!employeeData) {
       res
@@ -42,9 +39,10 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.employee_id = employeeData.id;
       req.session.logged_in = true;
-
+      
       res.json({ employee: employeeData, message: 'You are now logged in!' });
     });
+
   } catch (err) {
     res.status(400).json(err);
   }
