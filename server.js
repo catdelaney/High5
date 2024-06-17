@@ -4,6 +4,8 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const analyticsRouter = require('./controllers/analytics');
+const { Employee, Performance, Department } = require('./models');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -38,6 +40,10 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Use the analytics route
+app.use('/analytics', analyticsRouter);
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(routes);
 

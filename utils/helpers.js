@@ -19,4 +19,7 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  json: function (context) {
+    return JSON.stringify(context);
+  }
 };
