@@ -1,32 +1,35 @@
 <head>
     <title>High 5 - Data Analytics</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold mb-4">Data Analytics Page</h1>
+        <h1 class="text-3xl font-bold mb-4">Data Analytics</h1>
 
 <!-- Loop through each department -->
         {{#each performancesByDepartment}}
         <div class="mb-8">
+
 <!-- Display the department name as a heading -->
-            <h2 class="text-2xl font-bold mb-4">{{@key}}</h2>
+            <h3 class="text-2xl font-bold mb-4">{{@key}}</h3>
 
             <div class="grid grid-cols-3 gap-4">
+                
+                <!-- Revenue Generated chart -->
                 <div>
-                  <!-- Revenue Generated chart -->
-                    <h3 class="text-xl font-bold mb-2">Revenue Generated</h3>
+                    <h5 class="text-xl font-bold mb-2">Revenue Generated</h35>
                     <canvas id="{{@key}}RevenueChart"></canvas>
                 </div>
+                
+                <!-- Work Quality chart -->
                 <div>
-                  <!-- Work Quality chart -->
-                    <h3 class="text-xl font-bold mb-2">Work Quality</h3>
+                    <h5 class="text-xl font-bold mb-2">Work Quality</h5>
                     <canvas id="{{@key}}WorkQualityChart"></canvas>
                 </div>
+
+                <!-- New/Existing Business chart -->
                 <div>
-                  <!-- New/Existing Business chart -->
-                    <h3 class="text-xl font-bold mb-2">New/Existing Business</h3>
+                    <h5 class="text-xl font-bold mb-2">New/Existing Business</h5>
                     <canvas id="{{@key}}BusinessChart"></canvas>
                 </div>
             </div>
@@ -35,9 +38,10 @@
 
     <script>
         {{#each performancesByDepartment}}
+
+        // Creates a bar chart for Revenue Generated
         var {{@key}}RevenueCtx = document.getElementById('{{@key}}RevenueChart').getContext('2d');
         var {{@key}}RevenueChart = new Chart({{@key}}RevenueCtx, {
-            // Create a bar chart for Revenue Generated
             type: 'bar',
             data: {
                 labels: {{{json labels}}},
@@ -48,9 +52,9 @@
             }
         });
 
+        // Creates a bar chart for Work Quality
         var {{@key}}WorkQualityCtx = document.getElementById('{{@key}}WorkQualityChart').getContext('2d');
         var {{@key}}WorkQualityChart = new Chart({{@key}}WorkQualityCtx, {
-            // Create a bar chart for Work Quality
             type: 'bar',
             data: {
                 labels: {{{json labels}}},
@@ -61,9 +65,9 @@
             }
         });
 
+        // Creates a bar chart for New/Existing Business
         var {{@key}}BusinessCtx = document.getElementById('{{@key}}BusinessChart').getContext('2d');
         var {{@key}}BusinessChart = new Chart({{@key}}BusinessCtx, {
-            // Create a bar chart for New/Existing Business
             type: 'bar',
             data: {
                 labels: {{{json labels}}},
