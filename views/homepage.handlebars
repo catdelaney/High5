@@ -1,30 +1,71 @@
+<!-- Centered and styled company logo with animation -->
+<div class="flex justify-center items-center">
+  <img src="/images/company_logo.png" alt="Company Logo" class="logo">
+</div>
+
+<style>
+  .logo {
+    animation: fadeInOut 3s ease infinite alternate;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+
 <div class='container mx-auto p-4'>
-  <h1 class='text-3xl font-bold'>Elevate Everyone: Transforming Feedback into
-    Performance.</h1>
+  <h1 class='text-3xl font-bold'>Elevate Everyone: Transforming Feedback into Performance.</h1>
   <div>
+
+ <!-- Summary -->
+        <div class="mt-8">
+            <p>Discover the stars within your organization! Celebrate top achievers in key areas. Our intuitive interface spotlights the leading employees, 
+              showcasing their names and achievements in real-time. This feature not only recognizes outstanding contributions but also inspires a culture of excellence and motivation. 
+              Experience the power of feedback-driven performance and watch your team thrive!</p>
+        </div>
+
+<!-- Performance categories -->
     <div class='performance-container'>
+
+      <!-- Top performer for Revenue Generated -->
       <div class='performance-category' id='top-revenue'>
         <div class='performance-title'>Top Performer
           <br />
           Revenue Generated</div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/66/66490.png" alt="Top Revenue Performer Photo">       
         <div
           class='performance-employee-name'
           id='revenue-name'
         >{{topRevenueEmployee.first_name}}
           {{topRevenueEmployee.last_name}}</div>
       </div>
+
+      <!-- Top performer for Work Quality -->
       <div class='performance-category' id='top-work-quality'>
-        <div class='performance-title'>Top Performer <br /> Work Quality</div>
+        <div class='performance-title'>Top Performer <br /> 
+        Work Quality</div>
+
+        <img src="https://www.iconpacks.net/icons/2/free-quality-icon-3601-thumb.png" alt="Top Quality Performer Photo">
         <div
           class='performance-employee-name'
           id='work-quality-name'
         >{{topWorkQualityEmployee.first_name}}
           {{topWorkQualityEmployee.last_name}}</div>
       </div>
+
+      <!-- Top performer for New or Existing Business -->
       <div class='performance-category' id='top-new-existing-business'>
         <div class='performance-title'>Top Performer
           <br />
           New or Existing Business</div>
+
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/business-professional-services/company-enterprise-icon.png" alt="Top Business Performer Photo">
         <div
           class='performance-employee-name'
           id='new-existing-business-name'
@@ -34,3 +75,44 @@
     </div>
   </div>
 </div>
+
+<!-- Features -->
+<div class='container mx-auto p-4'>
+  <h2 class='text-3xl font-bold'>Features of High5</h2>
+  <div>    
+    <table class="table-auto">
+      <tbody>
+        <tr>
+          <td class="px-4 py-2"><strong>Feedback Surveys</strong></td>
+          <td class="px-4 py-2">Create and distribute surveys to gather feedback from employees.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2"><strong>Performance Reviews</strong></td>
+          <td class="px-4 py-2">Conduct and manage employee performance reviews.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2"><strong>Analytics Dashboard</strong></td>
+          <td class="px-4 py-2">Visualize data with interactive charts and graphs.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2"><strong>HR System Integration</strong></td>
+          <td class="px-4 py-2">Seamlessly integrate with existing HR systems.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Elevate Your HR Experience -->
+<div class='container mx-auto p-4'>
+  <div class="mt-8">
+    <h2 class='text-3xl font-bold'>Revolutionize Your HR Management</h2>
+    <p>High5 goes beyond performance management, serving as your ultimate HR companion. Simplify complex HR processes, effortlessly manage employee data, and foster seamless communication across your organization. Transform your HR operations with High5 and elevate every aspect of your HR experience.</p>
+    </br>
+    <div class="text-center">
+      <p class="mt-4 text-lg font-semibold">Ready to simplify HR? <a href="/login" class="underline">Try High5 today</a> and experience the difference!</p>
+    </div>
+  </div>
+</div>
+
+
